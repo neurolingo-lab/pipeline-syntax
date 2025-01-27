@@ -1,5 +1,11 @@
 # How to run this pipeline for a new subject via `mne-bids-pipeline`
 
+This is the pipeline for performing automatic preprocessing of MEG data and anatomical MRI for the syntax intermodulation experiment. It can easily be adapted to other tasks, however, and should serve as a good resource for those looking to do similar things.
+
+Most of the configuration is done via `mnebids_pipeline_config.py`, which specifies everything regarding the details of preprocessing to the source reconstruction. The [documentation](https://mne.tools/mne-bids-pipeline/stable/) for the pipeline from MNE is very, very thin. Be warned that you will likely have to dive into the source code for that tool at the moment since many steps are not documented at all. The config options at least are well-described!
+
+The included batch scripts are for the UNIGE cluster. Be sure to change the parameters as you need, especially the log file output paths!
+
 ## Step 1: Adding data to BIDS
 Ingest subject raw MEG data into the BIDS dataset using `mne-bids`. You will need to take the raw data into the dataset via the following command:
 
