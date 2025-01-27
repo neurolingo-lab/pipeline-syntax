@@ -107,7 +107,7 @@ You can now, after doing the filtering, perform a final notch filter and low/hig
 
 Once you're happy with the components to regress out, save the changes to this file. You can now move on! From here on out most steps take only a few minutes to run, so no batch scripts are provided.
 
-We will now make epochs from the data (again, check your pipeline config file to be sure your events are correct) and regress out the ICA components. **From here on out arguments for the BIDS root directory, subject, task, and session are omitted for brevity as "standard arguments".
+We will now make epochs from the data (again, check your pipeline config file to be sure your events are correct) and regress out the ICA components. **From here on out arguments for the BIDS root directory, subject, task, and session are omitted for brevity as "standard arguments".**
 
 ```bash
 mne_bids_pipeline [...standard arguments] --steps preprocessing/make_epochs,preprocessing/apply_ica,preprocessing/ptp_reject
